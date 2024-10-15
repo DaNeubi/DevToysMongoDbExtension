@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="DevToys.Api" Version="2.0.5-preview" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Update="DevToysMongoDbExtension.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>DevToysMongoDbExtension.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="DevToysMongoDbExtension.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>DevToysMongoDbExtension.resx</DependentUpon>
+      </Compile>
+    </ItemGroup>
+
+</Project>
