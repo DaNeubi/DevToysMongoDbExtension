@@ -4,6 +4,11 @@
         <TargetFramework>net8.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <IsPackable>true</IsPackable>
+        <Title>DevToys MongoDb Extension</Title>
+        <PackageProjectUrl>https://github.com/DaNeubi/DevToysMongoDbExtension</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/DaNeubi/DevToysMongoDbExtension</RepositoryUrl>
+        <Authors>DaNeubi</Authors>
     </PropertyGroup>
 
     <ItemGroup>
@@ -24,5 +29,20 @@
         <DependentUpon>DevToysMongoDbExtension.resx</DependentUpon>
       </Compile>
     </ItemGroup>
-
+    
+    <ItemGroup>
+        <None Include="runtimes\**" Pack="true" PackagePath="\lib\net8.0\runtimes\">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+    </ItemGroup>
+    
+    
+    <Target Name="IncludeAllFilesInTargetDir" BeforeTargets="_GetPackageFiles">
+        <ItemGroup>
+            <None Include="$(OutputPath)\**">
+                <Pack>true</Pack>
+                <PackagePath>lib\net8.0</PackagePath>
+            </None>
+        </ItemGroup>
+    </Target>
 </Project>
