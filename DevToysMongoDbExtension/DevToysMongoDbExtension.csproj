@@ -9,6 +9,8 @@
         <PackageProjectUrl>https://github.com/DaNeubi/DevToysMongoDbExtension</PackageProjectUrl>
         <RepositoryUrl>https://github.com/DaNeubi/DevToysMongoDbExtension</RepositoryUrl>
         <Authors>DaNeubi</Authors>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
     </PropertyGroup>
 
     <ItemGroup>
@@ -34,6 +36,8 @@
         <None Include="runtimes\**" Pack="true" PackagePath="\lib\net8.0\runtimes\">
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </None>
+        <None Include="README.md" Pack="true" PackagePath="\"/>
+        <None Include="LICENSE.txt" Pack="true" PackagePath=""/>
     </ItemGroup>
     
     
